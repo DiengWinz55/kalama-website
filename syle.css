@@ -91,4 +91,24 @@ body {
     color: #ff9800;
     text-decoration: none;
 }
-</style>
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .contact-form {
+        width: 90%;
+        max-width: 100%;
+    }
+
+    .image {
+        max-width: 80%;
+        margin-left: 0;
+    }
+}
