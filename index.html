@@ -3,75 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KALAMA - En Construction</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-            color: #fff;
-            text-align: center;
+    <title>Site en Construction</title>
+    <link rel="stylesheet" href="syle.css">
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            window.location.href = "confirmation.html";
         }
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.1);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-        }
-        .navbar img {
-            width: 150px;
-        }
-        .container {
-            max-width: 600px;
-            margin: 100px auto;
-            padding: 30px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
-        }
-        input, textarea, button {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        input, textarea {
-            background: rgba(255, 255, 255, 0.2);
-            color: #fff;
-        }
-        textarea {
-            height: 150px;
-        }
-        button {
-            background: #4f46e5;
-            cursor: pointer;
-            color: #fff;
-            font-weight: bold;
-        }
-        button:hover {
-            background: #4338ca;
-        }
-    </style>
+    </script>
 </head>
 <body>
-    <div class="navbar">
-        <img src="logo.png" alt="KALAMA Logo">
-    </div>
+    <div class="logo"><img src="logo.png" alt="logo"></div>
     <div class="container">
-        <h1>🚀 Site en construction</h1>
-        <p>Nous préparons quelque chose d'incroyable !</p>
-        <h2>Contactez-nous</h2>
-        <form action="mailto:contact@kalama.tech" method="post">
-            <input type="text" name="name" placeholder="Votre nom" required>
-            <input type="email" name="email" placeholder="Votre email" required>
-            <textarea name="message" placeholder="Votre message" required></textarea>
-            <button type="submit">Envoyer</button>
-        </form>
+        <div class="content">
+            <h1>Oups... On construit encore !</h1>
+            <p>On bosse dur pour vous offrir une expérience incroyable. Revenez bientôt !</p>
+            <p>Besoin de nous contacter ? Remplissez le formulaire ci-dessous.</p>
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" required>
+                <label for="email">Email :</label>
+                <input type="email" id="email" required>
+                <label for="message">Message :</label>
+                <textarea id="message" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+        <img src="construction-removebg-preview.png" alt="Site en construction" class="image">
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 KALAMA - Tous droits réservés | Dakar</p>
+        <p><a href="mailto:contact@kalama.tech">contact@kalama.tech</a></p>
     </div>
 </body>
 </html>
